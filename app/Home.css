@@ -8,7 +8,7 @@
   /* background-attachment: fixed; */
   align-items: center;
   flex-direction: column;
-  padding-top: 20vh;
+  /* padding-top: 20vh; */
 }
 .contact{
   background-image: url('../public/contact.png');

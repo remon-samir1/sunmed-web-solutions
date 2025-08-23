@@ -119,7 +119,7 @@ console.log(size);
 
   return (
     <>
-    <div className="home overflow-x-hidden">
+    <div className="home overflow-x-hidden pt-[20vh]">
       <Navbar />
       <h3
         ref={headingRef}

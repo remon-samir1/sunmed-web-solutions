@@ -1,0 +1,7 @@
+.neon-stroke {
+  filter: drop-shadow(0 0 8px #54EECC) drop-shadow(0 0 16px #54EECC);
+}
+
+.home {
+  background: radial-gradient(circle at center, #0f2027, #000000);
+}

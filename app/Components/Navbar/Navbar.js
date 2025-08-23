@@ -1,14 +1,26 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Logo from "../Logo/Logo";
 import { useGSAP } from "@gsap/react";
-// import MenuIcon from "../MenuIcon";
-
+import { BiMenuAltRight } from "react-icons/bi";
+import { IoMdClose } from "react-icons/io";
+import NavOpened from "./NavOpened";
 gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
+  const [open  , setOpen] = useState(false)
+  useEffect(()=>{
+    if(open){
+
+      document.documentElement.style.height ='100vh'
+      document.documentElement.style.overflowY ='hidden'
+    }else{
+      document.documentElement.style.height ='auto'
+      document.documentElement.style.overflowY ='auto'
+    }
+  },[open])
   const navRef = useRef(null);
 
   useGSAP(() => {
@@ -19,9 +31,9 @@ const Navbar = () => {
       {
       
         background: "rgba(175, 175, 175, 0.10)",
-        backdropFilter: "blur(10px) saturate(1) ",
-        boxShadow: "0px 0px 3px rgba(175, 175, 175, 0.50)",
-        duration: 5,
+        backdropFilter:  "blur(10px) saturate(1) ",
+        boxShadow: "rgba(175, 175, 175, 0.50)",
+        duration: 1,
         
         ease: "power4.out",
       }
@@ -54,15 +66,23 @@ const Navbar = () => {
   });
 
   return (
+    <>
+      {
+        open &&
+      <NavOpened isOpen={open} onClose={()=>setOpen(false)}/>
+      }
     <div
       ref={navRef}
       style={{
-        backgroundColor: "rgba(175, 175, 175, 0.10)",
+        backgroundColor: open ? "transparent": "rgba(175, 175, 175, 0.10)",
         padding: "15px 25px",
-        backdropFilter: "blur(200px)",
+        backdropFilter:  open ? "none":"blur(200px)",
+        backdropFilter:  open ? "none": "blur(10px) saturate(1) ",
+        boxShadow: open ? "none": "rgba(175, 175, 175, 0.50)",
       }}
       className="w-[90%] mx-auto h-[4.1rem] rounded-lg flex items-center justify-between fixed top-[2.5rem] left-[50%] translate-x-[-50%] backdrop-saturate-200 backdrop-blur-3xl z-50"
     >
+    
       <Logo />
       <div className="flex items-center gap-4">
         <span className="cursor-pointer text-[#54EECC] hover:text-[#54EECC] duration-300">
@@ -71,9 +91,10 @@ const Navbar = () => {
         <span className="text-white cursor-pointer hover:text-[#54EECC] duration-300">
           AR
         </span>
-        {/* <MenuIcon /> */}
+        <div onClick={()=>setOpen(prev => !prev)} className="border cursor-pointer border-white h-11 w-11 flex justify-center items-center rounded-full hover:bg-main hover-main hover:border-main duration-300">{open ?<IoMdClose className="w-7 h-7 text-white rota"/> :<BiMenuAltRight className="w-7 h-7 text-white rota"/>}</div>
       </div>
     </div>
+      </>
   );
 };
 
