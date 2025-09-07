@@ -89,7 +89,7 @@ const Testmonials = () => {
       </div>
 
       {/* Main Card */}
-      <div className="mt-6 relative bg-[#27284B] border border-stroke rounded-lg p-6 md:w-[575px] testmonials-card">
+      <div className="mt-6 relative bg-[#27284B] border border-stroke rounded-lg p-6 md:w-[575px] w-[90vw] testmonials-card">
         <div className="flex justify-start items-center gap-2">
           {Array.from({ length: 5 }).map((_, index) => (
             <FaStar key={index} className="text-[#CFB107] w-4 h-4" />
@@ -116,42 +116,42 @@ const Testmonials = () => {
 
         {/* Side Images */}
         <Image
-          className="absolute top-0 left-[110%] side-img"
+          className="absolute top-0 left-[110%] side-img hidden md:block"
           src="/p1.png"
           width="72"
           height="72"
           alt="p1"
         />
         <Image
-          className="absolute top-[35%] left-[120%] side-img"
+          className="absolute top-[35%] left-[120%] side-img hidden md:block"
           src="/p2.png"
           width="72"
           height="72"
           alt="p2"
         />
         <Image
-          className="absolute top-[75%] left-[110%] side-img"
+          className="absolute top-[75%] left-[110%] side-img hidden md:block"
           src="/p3.png"
           width="72"
           height="72"
           alt="p3"
         />
         <Image
-          className="absolute top-0 right-[110%] side-img"
+          className="absolute md:top-0 md:right-[110%] side-img  top-[140%] left-[50%]"
           src="/p4.png"
           width="72"
           height="72"
           alt="p4"
         />
         <Image
-          className="absolute top-[35%] right-[120%] side-img"
+          className="absolute md:top-[35%] md:right-[120%] side-img  top-[140%] left-[34%]"
           src="/p5.png"
           width="72"
           height="72"
           alt="p5"
         />
         <Image
-          className="absolute top-[75%] right-[110%] side-img"
+          className="absolute md:top-[75%] md:right-[110%] side-img  top-[140%] left-[42%]"
           src="/p6.png"
           width="72"
           height="72"

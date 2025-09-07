@@ -28,7 +28,6 @@ const Footer = () => {
         scrollTrigger: {
           trigger: footerRef.current,
           start: "top 80%",
-          toggleActions:"play reverse play reverse"
 
         },
       });
@@ -42,7 +41,6 @@ const Footer = () => {
         scrollTrigger: {
           trigger: footerRef.current,
           start: "top 70%",
-          toggleActions:"play reverse play reverse"
 
         },
       });
@@ -70,14 +68,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer ref={footerRef} className="footer px-[5%] py-5">
+    <footer ref={footerRef} className="footer px-[5%] py-5 mt-10 md:mt-0">
       <div className="text-center">
-        <h2 className="footer-title text-white font-bold text-8xl border-b-8 border-b-white py-2 w-max mx-auto ">
+        <h2 className="footer-title text-white font-bold text-5xl md:text-8xl md:border-b-8 border-b-4 border-b-white py-2 w-max mx-auto ">
           Get In touch
         </h2>
       </div>
 
-      <div className="flex items-start gap-5 justify-between mt-16 flex-wrap">
+      <div className="flex items-start md:flex-row flex-col  md:gap-5 gap-8 justify-between mt-16 flex-wrap">
         {/* first col */}
         <div className="footer-col flex-1 flex flex-col justify-start min-w-[250px]">
           <Logo />
@@ -166,7 +164,7 @@ const Footer = () => {
           <h3 className="text-white text-[1.3rem] font-semibold">Join newsletter</h3>
           <div className="mt-6">
             <Image src="/news.png" alt="news" width={119} height={39} />
-            <div className="flex items-center gap-2 bg-glass h-14 mt-8 rounded-lg">
+            <div className="flex items-center gap-2  bg-glass h-14 mt-8 rounded-lg">
               <input
                 type="text"
                 placeholder="Email"

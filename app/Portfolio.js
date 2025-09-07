@@ -102,9 +102,9 @@ const Portfolio = () => {
   });
 
   return (
-    <section ref={sectionRef} className="px-[5%] mt-8">
+    <section ref={sectionRef} className="px-[5%] mt-8 ">
       {/* Heading */}
-      <div className="flex items-end justify-between">
+      <div className="flex items-start md:items-end flex-col md:flex-row justify-between">
         <div>
           <p className="text-main whitespace-nowrap text-base">Our Portfolio</p>
           <h3 className="text-white whitespace-nowrap text-[2rem] font-semibold">
@@ -116,7 +116,7 @@ const Portfolio = () => {
             background: "rgba(175, 175, 175, 0.10)",
             backdropFilter: "blur(10px) saturate(1) ",
           }}
-          className="rounded-full px-2 h-14 flex items-center justify-start gap-2"
+          className="rounded-full overflow-x-scroll no-scrollbar max-w-[90vw] px-2 h-14 flex items-center justify-start gap-2"
         >
           {["All","web development","UI design","UX design","CMS development","app development"].map((btn , index)=>(
             <button
@@ -130,17 +130,17 @@ const Portfolio = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-3 grid-rows-3 gap-4 mt-6">
+      <div className="grid md:grid-cols-3 grid-cols-1 grid-rows-6  md:grid-rows-3 gap-4 mt-6">
         {portfolioItems.map((data, index) => (
           <div
             key={data.id}
             ref={(el) => (cardsRef.current[index] = el)}
-            className={`group relative border overflow-hidden border-[#4C4C66] rounded-2xl cursor-pointer 
+            className={`group h-[320px] md:h-auto relative border overflow-hidden border-[#4C4C66] rounded-2xl cursor-pointer 
             ${index === 0
-                ? "col-span-1 row-span-2"
+                ? "md:col-span-1 md:row-span-2"
                 : index === 1 || index === 4
-                ? "col-span-2 row-span-1"
-                : "col-span-1 row-span-1"}`}
+                ? "md:col-span-2 md:row-span-1"
+                : "md:col-span-1 md:row-span-1"}`}
           >
             <img
               src={data.image}

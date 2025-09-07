@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -11,6 +11,11 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const LatestProjects = () => {
+  const [resize  , setResize] = useState(window.innerWidth);
+  useEffect(()=>{
+    window.addEventListener("resize" , ()=> setResize(window.innerWidth))
+     return ()=> window.removeEventListener("resize" , ()=> setResize(window.innerWidth))
+  },[window.innerWidth])
   const containerRef = useRef(null);
 
   const portfolioItems = [
@@ -100,7 +105,7 @@ const LatestProjects = () => {
             Our Successful Projects
           </h3>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="md:flex items-center gap-4 hidden ">
           <div className="left-btn rounded-full border border-stroke cursor-pointer hover:bg-opacity-60 duration-200 bg-[#27284B] h-[3rem] w-[3rem] flex justify-center items-center ">
             <IoIosArrowBack className="text-white w-5 h-5" />
           </div>
@@ -113,7 +118,7 @@ const LatestProjects = () => {
       <div className="mt-10">
         <Swiper
           spaceBetween={30}
-          slidesPerView={3}
+          slidesPerView={resize > 820 ? 3 : 1}
           navigation={{ nextEl: ".right-btn", prevEl: ".left-btn" }}
           modules={[Navigation]}
           className="mySwiper"
@@ -144,6 +149,14 @@ const LatestProjects = () => {
           ))}
         </Swiper>
       </div>
+      <div className="flex items-center justify-center mt-6 md:hidden gap-4">
+          <div className="left-btn rounded-full border border-stroke cursor-pointer hover:bg-opacity-60 duration-200 bg-[#27284B] h-[3rem] w-[3rem] flex justify-center items-center ">
+            <IoIosArrowBack className="text-white w-5 h-5" />
+          </div>
+          <div className="right-btn rounded-full border border-stroke cursor-pointer hover:bg-opacity-60 duration-200 bg-[#27284B] h-[3rem] w-[3rem] flex justify-center items-center ">
+            <IoIosArrowBack className="text-white w-5 h-5 rotate-180" />
+          </div>
+        </div>
     </section>
   );
 };

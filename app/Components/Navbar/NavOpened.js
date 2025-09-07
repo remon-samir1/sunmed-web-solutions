@@ -4,8 +4,9 @@ import React, { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import "./NavOpened.css";
+import Navbar from "./Navbar";
 
-const NavOpened = () => {
+const NavOpened = ({setOpen}) => {
   const circleRef = useRef(null);
   const linksRef = useRef([]);
   const [hoverActive, setHoverActive] = useState(false);
@@ -77,10 +78,10 @@ const NavOpened = () => {
   };
 
   return (
-    <div className="h-screen home w-screen fixed top-0 left-0 flex items-center justify-center bg-black z-50">
+    <div style={{zIndex:"999"}}   className="h-screen   home w-screen fixed top-0 left-0 flex items-center justify-center z-50">
       <div
         ref={circleRef}
-        className="group w-[85vh] h-[85vh] max-h-screen flex flex-col justify-center items-center gap-6 relative glass-circle rounded-full"
+        className="group md:w-[85vh] w-[50vh] h-[50vh] md:h-[85vh] max-h-screen flex flex-col justify-center items-center gap-8 relative glass-circle rounded-full"
       >
         {/* Glow border */}
         <div
@@ -115,12 +116,13 @@ const NavOpened = () => {
           "Services",
           "Projects",
           "Pricing plan",
-          "Blog",
+          "Blogs",
           "Contact us",
         ].map((item, i) => (
           <Link
+          onClick={()=>setOpen(false)}
             key={i}
-            href="/"
+            href={item === 'Home' ? '/' : "/"+item.toLowerCase().split(" ")[0]}
             ref={(el) => (linksRef.current[i] = el)}
             onMouseEnter={() => {
               setHoverIndex(i);

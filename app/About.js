@@ -82,7 +82,7 @@ const About = () => {
     <div
       ref={sectionRef}
       style={{ padding: "20px 5%" }}
-      className="flex items-start justify-between gap-8 md:mt-5 overflow-x-hidden"
+      className="flex items-start md:flex-row flex-col justify-between gap-8 md:mt-5 overflow-x-hidden"
     >
       {/* Image */}
       <div ref={imgRef} className="flex-1">
