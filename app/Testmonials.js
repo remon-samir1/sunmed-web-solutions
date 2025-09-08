@@ -76,7 +76,7 @@ const Testmonials = () => {
   return (
     <div
       ref={containerRef}
-      className="testmonials py-[5vh] flex justify-center items-center flex-col"
+      className="testmonials py-20 flex justify-center items-center flex-col"
     >
       <div className="text-center testmonials-title">
         <p className="text-base capitalize text-main">Real feedback</p>
