@@ -17,17 +17,19 @@ export default function Home() {
   const [size, setSize] = useState();
   useEffect(() => {
     if (typeof window !== "undefined") {
-
-
-      window.addEventListener("resize", () =>
-      setSize((85 / 100) * window.innerWidth)
-      );
-      return () =>
-      window.removeEventListener("resize", () =>
-      setSize((85 / 100) * window.innerWidth)
-      );
+      const handleResize = () => setSize((85 / 100) * window.innerWidth);
+  
+    
+      setSize((window.innerWidth * 100) / 90);
+  
+      window.addEventListener("resize", handleResize);
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
     }
   }, []);
+  
   const svgRef = useRef();
   const headingRef = useRef();
   const textRef = useRef();
