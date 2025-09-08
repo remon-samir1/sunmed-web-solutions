@@ -139,7 +139,7 @@ const Section5 = () => {
         </h3>
         
         <p ref={paragraphRef} className="text-body text-base max-w-[250px]  md:max-w-[600px] text-center">
-          Don't miss the chance to elevate your brand with professional web
+          Dont miss the chance to elevate your brand with professional web
           solutions at special rates.
         </p>
         
