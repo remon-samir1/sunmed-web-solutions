@@ -17,7 +17,7 @@ const ProjectsSection2 = () => {
   const [resize  , setResize] = useState();
   useEffect(()=>{
     if (typeof window !== "undefined") {
-      const handleResize = () => setResize((85 / 100) * window.innerWidth);
+       setResize((85 / 100) * window.innerWidth);
 
     
       window.addEventListener("resize" , ()=> setResize(window.innerWidth))
@@ -106,7 +106,7 @@ const ProjectsSection2 = () => {
         <div className="left-btn absolute top-[110%] left-[38%]  md:left-[-5%] md:top-1/2 z-50 rounded-full border border-stroke cursor-pointer hover:bg-opacity-60 duration-200 bg-[#27284B] h-[3rem] w-[3rem] flex justify-center items-center">
           <IoIosArrowBack className="text-white w-5 h-5" />
         </div>
-        <div className="right-btn absolute md:right-[-5%] top-[110%] left-[52%] md:top-1/2 z-50 rounded-full border border-stroke cursor-pointer hover:bg-opacity-60 duration-200 bg-[#27284B] h-[3rem] w-[3rem] flex justify-center items-center">
+        <div className="right-btn absolute md:!right-[-5%] top-[110%] md:left-[101%] left-[52%] md:top-1/2 z-50 rounded-full border border-stroke cursor-pointer hover:bg-opacity-60 duration-200 bg-[#27284B] h-[3rem] w-[3rem] flex justify-center items-center">
           <IoIosArrowBack className="text-white w-5 h-5 rotate-180" />
         </div>
 
