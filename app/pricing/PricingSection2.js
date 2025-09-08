@@ -123,6 +123,7 @@ const PricingSection2 = () => {
         {Object.keys(plans).map((key) => (
           <button
             key={key}
+            style={{whiteSpace:"nowrap"}}
             onClick={() => setActivePlan(key)}
             className={`text-[1.9rem] mt-6 px-4 block ${
               activePlan === key
@@ -137,14 +138,13 @@ const PricingSection2 = () => {
 
       {/* Right side box */}
       <div className="md:w-[60%] w-full flex justify-end">
-        <div className=" rounded-[6rem] relative md:h-[39.5rem] h-[39.5rem] max-w-[540px] w-[90%] md:min-w-[70%]">
+        <div className=" rounded-[6rem] relative mt-4 md:mt-0  md:h-[39.5rem] h-[39.5rem] max-w-[540px] w-[90%] md:min-w-[70%]">
           <Image alt="pricing" src='/pricing.png' width='100' height='100' className='w-full rounded-[6rem] h-full object-cover'/>
           <div
             ref={contentRef}
           
             className="md:w-[90%] w-full  radius p-5 h-full border border-stroke bg-background2 absolute md:top-[10%] top-[15%] left-0 md:translate-x-[-20%] translate-x-[-15%] flex flex-col justify-between"
           >
-            {/* Content */}
             <div>
               <h3 className="text-white text-[1.3rem] font-medium mt-8">
                 {plan.title}

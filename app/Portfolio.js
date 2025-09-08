@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -133,7 +134,7 @@ const Portfolio = () => {
       {/* Cards */}
       <div className="grid md:grid-cols-3 grid-cols-1 grid-rows-6  md:grid-rows-3 gap-4 mt-6">
         {portfolioItems.map((data, index) => (
-          <div
+          <Link href='/projects/details' 
             key={data.id}
             ref={(el) => (cardsRef.current[index] = el)}
             className={`group h-[320px] md:h-auto relative border overflow-hidden border-[#4C4C66] rounded-2xl cursor-pointer 
@@ -164,7 +165,7 @@ const Portfolio = () => {
                 {data.description}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

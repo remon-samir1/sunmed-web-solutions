@@ -7,6 +7,7 @@ import { Navigation } from "swiper/modules";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -129,7 +130,7 @@ const LatestProjects = () => {
         >
           {portfolioItems.map((data) => (
             <SwiperSlide key={data.id}>
-              <div className="project-card group w-full h-full relative overflow-hidden rounded-2xl shadow-lg cursor-pointer">
+              <Link href='/projects/details'  className="project-card group w-full h-full relative overflow-hidden rounded-2xl shadow-lg cursor-pointer">
                 <img
                   src={data.image}
                   alt={data.title}
@@ -149,7 +150,7 @@ const LatestProjects = () => {
                     {data.description}
                   </p>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
