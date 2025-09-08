@@ -48,13 +48,13 @@ const Subscribe = () => {
           <p className="text-body text-[0.9rem] mt-4 animate-item md:w-auto max-w-[90%] text-center mx-auto md:mx-0">
             Commodo elementum, sed imperdiet nunc euismod etiam aliquet viverra
           </p>
-          <div className="flex mt-6 items-center gap-6 animate-item">
+          <div className="flex mt-6 items-center gap-6 animate-item ">
             <input
               type="email"
               placeholder="Email"
-              className="flex-1 bg-white text-body rounded-full py-3 px-5 outline-none"
+              className="flex-1 bg-white text-body rounded-full py-3 pl-5 outline-none"
             />
-            <button className="text-black bg-main  hover-main px-8 py-3 rounded-full hover:bg-[#54EECC] transition-colors duration-300">
+            <button className="text-black bg-main  hover-main px-6 md:px-8 py-3 rounded-full hover:bg-[#54EECC] transition-colors duration-300">
               Subscribe
             </button>
           </div>
