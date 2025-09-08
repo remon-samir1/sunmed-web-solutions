@@ -27,7 +27,7 @@ export default function Home() {
       setSize((85 / 100) * window.innerWidth)
       );
     }
-  }, [window.innerWidth]);
+  }, []);
   const svgRef = useRef();
   const headingRef = useRef();
   const textRef = useRef();
