@@ -137,16 +137,15 @@ const Portfolio = () => {
           <Link href='/projects/details' 
             key={data.id}
             ref={(el) => (cardsRef.current[index] = el)}
-            className={`group h-[320px] md:h-auto relative border overflow-hidden border-[#4C4C66] rounded-2xl cursor-pointer 
+            className={`group h-[280px] md:h-auto relative border overflow-hidden border-[#4C4C66] rounded-2xl cursor-pointer 
             ${index === 0
                 ? "md:col-span-1 md:row-span-2"
                 : index === 1 || index === 4
                 ? "md:col-span-2 md:row-span-1"
                 : "md:col-span-1 md:row-span-1"}`}
           >
-            <Image
-            width={100}
-            height={100}
+            <img
+            
               src={data.image}
               loading="lazy"
               alt="project"
