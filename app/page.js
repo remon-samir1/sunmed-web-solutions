@@ -16,13 +16,17 @@ import Link from "next/link";
 export default function Home() {
   const [size, setSize] = useState((window.innerWidth * 100) / 90);
   useEffect(() => {
-    window.addEventListener("resize", () =>
+    if (typeof window !== "undefined") {
+
+
+      window.addEventListener("resize", () =>
       setSize((85 / 100) * window.innerWidth)
-    );
-    return () =>
-      window.removeEventListener("resize", () =>
-        setSize((85 / 100) * window.innerWidth)
       );
+      return () =>
+      window.removeEventListener("resize", () =>
+      setSize((85 / 100) * window.innerWidth)
+      );
+    }
   }, [window.innerWidth]);
   const svgRef = useRef();
   const headingRef = useRef();
