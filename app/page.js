@@ -14,7 +14,7 @@ import Footer from "./Components/Footer/Footer";
 import Link from "next/link";
 
 export default function Home() {
-  const [size, setSize] = useState((window.innerWidth * 100) / 90);
+  const [size, setSize] = useState(typeof window !== "undefined" && (window.innerWidth * 100) / 90);
   useEffect(() => {
     if (typeof window !== "undefined") {
 
