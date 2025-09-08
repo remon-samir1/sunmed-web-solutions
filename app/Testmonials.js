@@ -114,7 +114,6 @@ const Testmonials = () => {
           </div>
         </div>
 
-        {/* Side Images */}
         <Image
           className="absolute top-0 left-[110%] side-img hidden md:block"
           src="/p1.png"

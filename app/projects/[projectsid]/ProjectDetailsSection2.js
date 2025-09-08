@@ -160,11 +160,12 @@ const ProjectDetailsSection2 = () => {
         <div className="flex items-center gap-5 flex-wrap">
           {
             Array.from({length:3}).map((_,index)=>(
-              <Link href='/projects/details/ss' className="flex-1 min-w-[250px] mt-4 h-[13rem] rounded-lg overflow-hidden">
+              <Link key={index} href='/projects/details/ss' className="flex-1 min-w-[250px] mt-4 h-[13rem] rounded-lg overflow-hidden">
               <Image
                   src="/details-ex.png"
                   width="200"
                   height="200"
+                  alt="project"
                   className="w-full h-full"
                 />
               </Link>

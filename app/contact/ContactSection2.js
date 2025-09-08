@@ -135,6 +135,7 @@ const ContactSection2 = () => {
         <Image
           src="/map.png"
           height={470}
+          alt="contact us"
           width={200}
           className="w-full h-full object-cover rounded-lg md:rounded-none"
         />

@@ -26,6 +26,7 @@ const BlogsDetailsSection3 = () => {
           <Image
             src="/blogs.png"
             height="100"
+            alt="blog"
             width="200"
             className="w-full h-[15rem] object-cover"
           />

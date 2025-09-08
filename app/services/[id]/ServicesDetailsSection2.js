@@ -348,6 +348,7 @@ const ServicesDetailsSection2 = () => {
               src="/services-ex.png"
               width="100"
               height="100"
+              alt="meeting"
               className="w-full h-full"
             />
           </div>

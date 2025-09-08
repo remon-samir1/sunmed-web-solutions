@@ -61,6 +61,7 @@ useGSAP(()=>{
             src="/blogs.png"
             height="100"
             width="200"
+            alt="blog"
             className="w-full md:h-[15rem]  object-cover"
           />
           <div className="p-3">

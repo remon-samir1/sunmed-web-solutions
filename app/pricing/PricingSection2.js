@@ -138,7 +138,7 @@ const PricingSection2 = () => {
       {/* Right side box */}
       <div className="md:w-[60%] w-full flex justify-end">
         <div className=" rounded-[6rem] relative md:h-[39.5rem] h-[39.5rem] max-w-[540px] w-[90%] md:min-w-[70%]">
-          <Image src='/pricing.png' width='100' height='100' className='w-full rounded-[6rem] h-full object-cover'/>
+          <Image alt="pricing" src='/pricing.png' width='100' height='100' className='w-full rounded-[6rem] h-full object-cover'/>
           <div
             ref={contentRef}
           

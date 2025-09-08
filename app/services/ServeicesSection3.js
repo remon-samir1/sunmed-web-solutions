@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,12 +96,10 @@ const ServeicesSection3 = () => {
           {BoxesData.map((data) => (
             <SwiperSlide key={data.id}>
               <Link href='/services/details' className="service-box border p-3 flex-col border-stroke group  w-full h-[22rem] relative overflow-hidden rounded-2xl shadow-lg cursor-pointer flex justify-center items-center gap-4">
-                <img 
-                // loading="lazy"
-                   style={{
-                    height:"94%",
-                    width:"94%",
-                   }}
+                <Image 
+                  alt="sunmed"
+                  width={100}
+                  height={100}
                   src="/servicesBox.png"
                   className="absolute h-[94%] w-[94%] top-1/2 left-1/2 translate-x-[-50%] rounded-xl translate-y-[-50%]  object-cover "
                 />
