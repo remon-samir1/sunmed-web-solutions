@@ -211,7 +211,7 @@ const ServicesDetailsSection2 = () => {
       ref={sectionRef}
     >
       {/* Side Section */}
-      <div className="w-[395px]">
+      <div className="w-full md:w-[395px]">
         <div className="w-full bg-background2 px-3 py-5">
           {sideData.map((data, index) => (
             <div
