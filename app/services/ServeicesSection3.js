@@ -16,9 +16,10 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const ServeicesSection3 = () => {
-  const [resize  , setResize] = useState(window.innerWidth);
+  const [resize  , setResize] = useState();
   useEffect(()=>{
     if (typeof window !== "undefined") {
+      const handleResize = () => setResize((85 / 100) * window.innerWidth);
       
       window.addEventListener("resize" , ()=> setResize(window.innerWidth))
       return ()=> window.removeEventListener("resize" , ()=> setResize(window.innerWidth))

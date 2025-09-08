@@ -14,7 +14,7 @@ import Footer from "./Components/Footer/Footer";
 import Link from "next/link";
 
 export default function Home() {
-  const [size, setSize] = useState();
+  const [size, setSize] = useState(0);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const handleResize = () => setSize((85 / 100) * window.innerWidth);

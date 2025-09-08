@@ -11,8 +11,10 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const LatestProjects = () => {
-  const [resize  , setResize] = useState(window.innerWidth);
+  const [resize  , setResize] = useState();
   useEffect(()=>{
+      const handleResize = () => setResize((85 / 100) * window.innerWidth);
+
     if (typeof window !== "undefined") {
       window.addEventListener("resize" , ()=> setResize(window.innerWidth))
       return ()=> window.removeEventListener("resize" , ()=> setResize(window.innerWidth))
