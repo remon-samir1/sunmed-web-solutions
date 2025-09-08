@@ -137,21 +137,21 @@ const Testmonials = () => {
           alt="p3"
         />
         <Image
-          className="absolute md:top-0 md:right-[110%] side-img  top-[140%] left-[50%]"
+          className="absolute md:top-0 md:right-[110%] side-img  top-[140%] right-[50%]"
           src="/p4.png"
           width="72"
           height="72"
           alt="p4"
         />
         <Image
-          className="absolute md:top-[35%] md:right-[120%] side-img  top-[140%] left-[34%]"
+          className="absolute md:top-[35%] md:right-[120%] side-img  top-[140%] right-[34%]"
           src="/p5.png"
           width="72"
           height="72"
           alt="p5"
         />
         <Image
-          className="absolute md:top-[75%] md:right-[110%] side-img  top-[140%] left-[42%]"
+          className="absolute md:top-[75%] md:right-[110%] side-img  top-[140%] right-[42%]"
           src="/p6.png"
           width="72"
           height="72"

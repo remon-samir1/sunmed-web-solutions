@@ -13,9 +13,11 @@ gsap.registerPlugin(ScrollTrigger);
 const LatestProjects = () => {
   const [resize  , setResize] = useState(window.innerWidth);
   useEffect(()=>{
-    window.addEventListener("resize" , ()=> setResize(window.innerWidth))
-     return ()=> window.removeEventListener("resize" , ()=> setResize(window.innerWidth))
-  },[window.innerWidth])
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize" , ()=> setResize(window.innerWidth))
+      return ()=> window.removeEventListener("resize" , ()=> setResize(window.innerWidth))
+    }
+  },[])
   const containerRef = useRef(null);
 
   const portfolioItems = [

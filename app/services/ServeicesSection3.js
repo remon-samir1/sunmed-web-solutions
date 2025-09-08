@@ -17,9 +17,12 @@ gsap.registerPlugin(ScrollTrigger);
 const ServeicesSection3 = () => {
   const [resize  , setResize] = useState(window.innerWidth);
   useEffect(()=>{
-    window.addEventListener("resize" , ()=> setResize(window.innerWidth))
-     return ()=> window.removeEventListener("resize" , ()=> setResize(window.innerWidth))
-  },[window.innerWidth])
+    if (typeof window !== "undefined") {
+      
+      window.addEventListener("resize" , ()=> setResize(window.innerWidth))
+      return ()=> window.removeEventListener("resize" , ()=> setResize(window.innerWidth))
+    }
+  },[])
   const sectionRef = useRef(null);
 
   const BoxesData = [
