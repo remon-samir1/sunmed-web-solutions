@@ -131,8 +131,9 @@ const LatestProjects = () => {
                 <img
                   src={data.image}
                   alt={data.title}
-                  // width={600}
-                  // height={400}
+                  // width={100}
+                  // height={100}
+                  // unoptimized
                   className="object-cover w-full h-[350px] transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 duration-500 flex flex-col justify-end p-5">

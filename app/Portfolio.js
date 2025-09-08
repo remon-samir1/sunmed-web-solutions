@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -142,7 +143,9 @@ const Portfolio = () => {
                 ? "md:col-span-2 md:row-span-1"
                 : "md:col-span-1 md:row-span-1"}`}
           >
-            <img
+            <Image
+            width={100}
+            height={100}
               src={data.image}
               loading="lazy"
               alt="project"
