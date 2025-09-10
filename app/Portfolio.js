@@ -153,10 +153,10 @@ const Portfolio = () => {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent md:opacity-0 group-hover:opacity-100 duration-500"></div>
 
             {/* Text */}
-            <div className="absolute bottom-6 left-6 right-6 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-500">
+            <div className="absolute bottom-6 left-6 right-6 md:translate-y-10 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-500">
               <h3 className="text-white text-[1.2rem] font-semibold">
                 {data.title}
               </h3>
