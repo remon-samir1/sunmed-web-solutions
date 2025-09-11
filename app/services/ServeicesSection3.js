@@ -19,7 +19,7 @@ const ServeicesSection3 = () => {
   const [resize  , setResize] = useState();
   useEffect(()=>{
     if (typeof window !== "undefined") {
-      const handleResize = () => setResize((85 / 100) * window.innerWidth);
+ setResize((85 / 100) * window.innerWidth);
       
       window.addEventListener("resize" , ()=> setResize(window.innerWidth))
       return ()=> window.removeEventListener("resize" , ()=> setResize(window.innerWidth))
@@ -80,10 +80,10 @@ const ServeicesSection3 = () => {
       </div>
 
       <div className="mt-10 relative">
-        <div className="left-btn absolute left-[-5%] top-1/2 rounded-full border border-stroke cursor-pointer hover:bg-opacity-60 duration-200 bg-[#27284B] h-[3rem] w-[3rem] !flex justify-center items-center ">
+        <div className="left-btn absolute z-50 left-[-5%] top-1/2 rounded-full border border-stroke cursor-pointer hover:bg-opacity-60 duration-200 bg-[#27284B] h-[3rem] w-[3rem] !flex justify-center items-center ">
           <IoIosArrowBack className="text-white w-5 h-5" />
         </div>
-        <div className="right-btn absolute right-[-5%] top-1/2 rounded-full border border-stroke cursor-pointer hover:bg-opacity-60 duration-200 bg-[#27284B] h-[3rem] w-[3rem] !flex justify-center items-center ">
+        <div className="right-btn absolute z-50 right-[-5%] top-1/2 rounded-full border border-stroke cursor-pointer hover:bg-opacity-60 duration-200 bg-[#27284B] h-[3rem] w-[3rem] !flex justify-center items-center ">
           <IoIosArrowBack className="text-white w-5 h-5 rotate-180" />
         </div>
         <Swiper

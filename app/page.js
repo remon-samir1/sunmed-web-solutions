@@ -165,7 +165,7 @@ export default function Home() {
         <p
           ref={textRef}
           style={{ lineHeight: "30px", marginTop: "20px" }}
-          className="text-center text-[#D1D5DB] text-[1.1rem] mx-auto max-w-[90%] md:max-w-[700px] "
+        className="text-center text-[#D1D5DB] text-[1.1rem] mx-auto max-w-[90%] md:max-w-[700px] "
         >
           From web design to development and marketing we craft solutions that
           help your business stand out
